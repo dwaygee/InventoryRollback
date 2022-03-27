@@ -16,18 +16,13 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        /*
-        Checks if the plugin's config folder exists
-        if not it creates a new one
-         */
         if (!getDataFolder().exists()) {
             getDataFolder().mkdir();
         }
 
-        //Registers all plugin listeners
         getServer().getPluginManager().registerEvents(new OnPlayerJoinEvent(), this);
         getServer().getPluginManager().registerEvents(new OnPlayerLeaveEvent(), this);
-        //Registers all plugin commands
+
         getCommand("inventoryrollback").setExecutor(new InventoryRollbackCommand());
 
         new BukkitRunnable() {

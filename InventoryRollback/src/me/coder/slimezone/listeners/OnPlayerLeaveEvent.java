@@ -18,7 +18,6 @@ public class OnPlayerLeaveEvent implements Listener {
 
         String uuid = e.getPlayer().getUniqueId().toString();
 
-        //Creates a data file for the joined player
         File player = new File(plugin.getDataFolder() + "/playerdata", uuid);
         File inventoryFile = new File(plugin.getDataFolder() + "/playerdata/" + uuid, "inventories.yml");
         if (!player.exists()) {
@@ -26,7 +25,6 @@ public class OnPlayerLeaveEvent implements Listener {
             inventoryFile.createNewFile();
         }
 
-        //Saves the player's inventory on every join
         InventoryUtils.saveInventory(e.getPlayer());
     }
 }
