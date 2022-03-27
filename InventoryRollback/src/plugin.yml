@@ -1,0 +1,10 @@
+name: InventoryRollback
+version: 1.0
+main: me.coder.slimezone.Main
+api-version: 1.18
+authors: [ Hunter ]
+description: Logs all players inventorys and saves them to the data folder periodically
+commands:
+  inventoryrollback:
+    aliases: [ ir, inventoryr, irollback ]
+    description: Allows use of all main plugin commands
